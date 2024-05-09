@@ -7,7 +7,7 @@ export interface DEFAULT_PROPS {
     blockquoteBreakingLevel: 0;
     fontNames: FontName[];
     toolbar: SummernoteLiteProps['toolbar'];
-};
+}
 
 type FontName = 'Arial' | 'Brush Script MT' | 'Calibri' | 'Candara' | 'Century Gothic' | 'Consolas' | 'Dejavu Sans' | 'Franklin Gothic' | 'Gill Sans' | 'Geneva' | 'Georgia' | 'Garamond' | 'Helvetica' | 'Lucida Sans' | 'MS Sans Serif' | 'Neue Helvetica' | 'Optima' | 'Segoe UI' | 'Tahoma' | 'Trebuchet MS' | 'Verdana';
 
@@ -45,6 +45,11 @@ interface Commands {
     toggleCodeview: (command: 'codeview.toggle') => void;
     toggleFullscreen: (command: 'fullscreen.toggle') => void;
     insertNode: (command: 'insertNode', node?: React.Component | any) => void;
+    insertText: (command: 'insertText', text: string) => void;
+    pasteHTML: (command: 'pasteHTML', html: string) => void;
+    focus: (command: 'focus') => void;
+    disable: (command: 'disable') => void;
+    enable: (command: 'enable') => void;
 }
 
 type SummernoteCommandFunction = {
